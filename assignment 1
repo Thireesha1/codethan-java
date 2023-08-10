@@ -1,0 +1,31 @@
+import java.util.UUID;
+
+public class Exposure {
+    private UUID patientId;
+
+    public Exposure(UUID patientId) {
+        this.patientId = patientId;
+    }
+
+    public UUID getPatientId() {
+        return patientId;
+    }
+
+    public void setPatientId(UUID patientId) {
+        this.patientId = patientId;
+    }
+
+    @Override
+    public String toString() {
+        return "Exposure{" +
+                "patientId=" + patientId +
+                '}';
+    }
+
+    public static void main(String[] args) {
+        UUID exampleUUID = UUID.randomUUID();
+        Exposure exposure = new Exposure(exampleUUID);
+        System.out.println("Patient ID: " + exposure.getPatientId());
+        System.out.println(exposure);
+    }
+}
